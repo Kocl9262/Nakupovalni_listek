@@ -11,7 +11,7 @@ while odg != "ne":
         listek.append(item)
 
     elif odg == "ne":
-        print("Hvala za nakup!")
+        print("Vaš nakupovalni listek je končan")
         for x in listek:
             print(x)
 
@@ -19,17 +19,17 @@ while odg != "ne":
         print("Poskusite z 'da' ali 'ne' ")
 
 while shrani != "ne":
-    shrani = raw_input("Želiš shraniti nakup v arhiv? (da/ne) ")
+    shrani = raw_input("Želiš shraniti nakupovalni listek v arhiv? (da/ne) ")
     if shrani == "da":
-        a = raw_input("Vpišite ime za arhiv (brez presledka): ")
+        a = raw_input("Vpišite ime za listek (brez presledka): ")
         with open(a + ".txt", "wb") as f:
             for x in listek:
                 f.write(x + "\n")
-        print("Vaš arhiv je shranjen kot " + a + ".txt")
+        print("Vaš listek je shranjen kot " + a + ".txt")
         break
 
     elif shrani == "ne":
-        print("Niste shranili vašega nakupa")
+        print("Niste shranili vašega listka")
 
     else:
         print("Poskusite z 'da' ali 'ne' ")
